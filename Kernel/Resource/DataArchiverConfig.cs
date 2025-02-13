@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Blanketmen.Hypnos.Serialization;
+using Blanketmen.Hypnos.Compression;
+using Blanketmen.Hypnos.Encryption;
+using System;
 
 namespace Blanketmen.Hypnos
 {
@@ -6,8 +9,8 @@ namespace Blanketmen.Hypnos
     public class DataArchiverConfig
     {
         public int id;
-        public CoreSerializer serializer;
-        public CoreCompressor compressor;
-        public CoreEncryptor encryptor;
+        public ISerializer serializer;
+        public ICompressor compressor;
+        public IEncryptor encryptor;
     }
 }

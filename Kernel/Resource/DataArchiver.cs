@@ -1,6 +1,8 @@
 ﻿using Blanketmen.Hypnos.Compression;
 using Blanketmen.Hypnos.Encryption;
 using Blanketmen.Hypnos.Serialization;
+using System;
+using System.IO;
 
 namespace Blanketmen.Hypnos
 {

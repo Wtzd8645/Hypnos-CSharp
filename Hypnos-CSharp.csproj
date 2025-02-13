@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <RootNamespace>Blanketmen.Hypnos</RootNamespace>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
@@ -9,13 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Core\**" />
-    <EmbeddedResource Remove="Core\**" />
-    <None Remove="Core\**" />
+    <PackageReference Include="System.Text.Json" Version="9.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="Core\Hypnos-Core-CSharp.csproj" />
+    <Reference Include="Blanketmen.Hypnos.Core">
+      <HintPath>..\Runtime\Plugins\Blanketmen.Hypnos.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

@@ -40,9 +40,9 @@ namespace Blanketmen.Hypnos
             {
                 DataArchiverConfig archiverConfig = config.dataArchiverConfigs[i];
                 DataArchiver archiver = new DataArchiver(
-                    CoreUtil.CreateSerializer(archiverConfig.serializer),
-                    CoreUtil.CreateCompressor(archiverConfig.compressor),
-                    CoreUtil.CreateEncryptor(archiverConfig.encryptor));
+                    archiverConfig.serializer,
+                    archiverConfig.compressor,
+                    archiverConfig.encryptor);
                 dataArchivers.Add(archiverConfig.id, archiver);
             }
         }
