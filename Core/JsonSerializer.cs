@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using Newtonsoft.Json;
 
 namespace Blanketmen.Hypnos.Serialization
 {
@@ -8,7 +9,7 @@ namespace Blanketmen.Hypnos.Serialization
         {
             try
             {
-                string json = System.Text.Json.JsonSerializer.Serialize(obj);
+                string json = JsonConvert.SerializeObject(obj);
                 return System.Text.Encoding.UTF8.GetBytes(json);
             }
             catch (Exception)
@@ -22,7 +23,7 @@ namespace Blanketmen.Hypnos.Serialization
             try
             {
                 string json = System.Text.Encoding.UTF8.GetString(data);
-                return System.Text.Json.JsonSerializer.Deserialize<T>(json);
+                return JsonConvert.DeserializeObject<T>(json);
             }
             catch (Exception)
             {
