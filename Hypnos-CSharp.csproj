@@ -9,10 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="Blanketmen.Hypnos.Core">
       <HintPath>Plugins\Blanketmen.Hypnos.Core.dll</HintPath>
     </Reference>
